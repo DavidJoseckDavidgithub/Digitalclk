@@ -5,11 +5,12 @@
 
 int main()
 {
-	int h,m,s;
+	int h, m, s;
+	h=m=s= 0;
 	int d = 1000; // for slow down 1000 milliseconds used to be input into sleep function
 
 	printf("Set time : \n");
-	scanf("%d,%d,%d",&h,&m,&s);
+	scanf("%d : %d : %d", &h,&m,&s);
 	if(h > 12 || m > 60 || s > 60)
 	{
 		printf("ERROR ! \n");
@@ -20,7 +21,7 @@ int main()
 		s++;
 		if(s > 59)
 		{
-			 m++;
+			m++;
 			s = 0;
 		}
                 if(m > 59)
@@ -32,9 +33,10 @@ int main()
 		{
 			h = 1;
 		}
-	printf("\n clock :");
-	printf("\n %02d,%02d,%02d",h,m,s);
+	printf("\n clock : ");
+	printf("\n %02d : %02d : %02d", h,m,s);
 	sleep(d); // the function sleep slows down the loop and makes it like a real clock
 	system("cls"); // clears the screan
 	}
+	return (0);
 }
